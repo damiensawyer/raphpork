@@ -1,15 +1,31 @@
-<html><head>
+<html>
+  <head>
     <title>bob's crispy pork.com</title>
-        <style>
-            body{
-                background-color:brown;
-                color:rosybrown
-            }
+    <style>
+      body {
+        background-color: brown;
+        color: rosybrown;
+      }
+      #porkImage {
+        display: none; /* Hide the image initially */
+      }
     </style>
-</head><body>
+    <script>
+      function toggleImage() {
+        var checkbox = document.querySelector('input[type="checkbox"]');
+        var image = document.getElementById('porkImage');
+        image.style.display = checkbox.checked ? 'block' : 'none';
+      }
+    </script>
+  </head>
+  <body>
     <h1>How to make Bob's Crispy Pork</h1>
-    <h3> To make Bob's crispy pork, start by slicing a pork loin into thin, even strips. Season the strips with a mix of salt, pepper, garlic powder, and paprika, then coat them in a light layer of flour, shaking off the excess. Heat a generous amount of vegetable oil in a skillet over medium-high heat. Once the oil is hot, carefully add the pork strips, cooking them in batches to avoid overcrowding the pan. Fry each side for 2-3 minutes until golden brown and crispy. Transfer the cooked pork to a paper towel-lined plate to drain any excess oil. For added crunch, you can toss the crispy pork with a sprinkle of sea salt and a squeeze of lime juice before serving. Enjoy this savory treat as a delicious appetizer or a hearty main course!</h3>
-    <img src="https://asianinspirations.com.au/wp-content/uploads/2019/05/R02301_Crispy_Pork_Belly.jpg" alt="Bob's Crispy Pork" width="450" height="300">
-    <h2> Please tick the box below if you enjoyed Bob's Crispy Pork </h2>
-    <input type="checkbox">
-</body></html>
+    <h3>
+      To make Bob's crispy pork, start by slicing a pork loin into thin, even strips. Season the strips with a mix of salt, pepper, garlic powder, and paprika, then coat them in a light layer of flour, shaking off the excess. Heat a generous amount of vegetable oil in a skillet over medium-high heat. Once the oil is hot, carefully add the pork strips, cooking them in batches to avoid overcrowding
+      the pan. Fry each side for 2-3 minutes until golden brown and crispy. Transfer the cooked pork to a paper towel-lined plate to drain any excess oil. For added crunch, you can toss the crispy pork with a sprinkle of sea salt and a squeeze of lime juice before serving. Enjoy this savory treat as a delicious appetizer or a hearty main course!
+    </h3>
+    <h2>Please tick the box below if you enjoyed Bob's Crispy Pork</h2>
+    <input type="checkbox" onchange="toggleImage()" />
+    <img id="porkImage" src="https://asianinspirations.com.au/wp-content/uploads/2019/05/R02301_Crispy_Pork_Belly.jpg" alt="Bob's Crispy Pork" width="450" height="300" />
+  </body>
+</html>
